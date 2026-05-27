@@ -51,6 +51,8 @@ export default function Home() {
 
   const [previewError, setPreviewError] = useState<string | null>(null);
   const [selectedStyle, setSelectedStyle] = useState<string>('');
+  const [refineFeedback, setRefineFeedback] = useState('');
+  const [refining, setRefining] = useState(false);
 
   // ---- sellingPoints helpers
 
@@ -150,6 +152,53 @@ export default function Home() {
       setGenerationResult({ status: 'error' });
     } finally {
       setGenerating(false);
+    }
+  };
+
+  // ---- refine handler
+
+  const handleRefine = async () => {
+    if (!refineFeedback.trim() || !generationResult?.content || !generationResult?.colorScheme) return;
+
+    setRefining(true);
+    setPreviewError(null);
+
+    try {
+      const res = await fetch('/api/refine', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          content: generationResult.content,
+          colorScheme: generationResult.colorScheme,
+          feedback: refineFeedback,
+          ...(selectedStyle ? { styleId: selectedStyle } : {}),
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok || data.result.error) {
+        throw new Error(data.result.error ?? '优化失败');
+      }
+
+      const { content } = data.result;
+      setGenerationResult({ content, status: 'done' });
+      setRefineFeedback('');
+
+      // Regenerate preview
+      const previewRes = await fetch('/api/preview', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content, skeleton: selectedSkeleton!, colorScheme: generationResult.colorScheme! }),
+      });
+      const previewData = await previewRes.json();
+      if (previewData.html) {
+        setPreviewHtml(previewData.html);
+        setPreviewError(null);
+      }
+    } catch (err) {
+      setPreviewError(err instanceof Error ? err.message : '优化失败');
+    } finally {
+      setRefining(false);
     }
   };
 
@@ -332,6 +381,29 @@ export default function Home() {
                 productName={userInput.productName}
               />
             </div>
+          </div>
+        )}
+
+        {/* 修改建议栏 */}
+        {previewHtml && (
+          <div className="flex items-center gap-2 border-b border-gray-200 bg-white px-4 py-2">
+            <input
+              type="text"
+              value={refineFeedback}
+              onChange={(e) => setRefineFeedback(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleRefine()}
+              placeholder="输入修改建议，如「标题再大一点」「配色暖一点」..."
+              className="flex-1 rounded-lg border border-gray-300 px-3 py-1.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              disabled={refining}
+            />
+            <button
+              type="button"
+              onClick={handleRefine}
+              disabled={refining || !refineFeedback.trim()}
+              className="rounded-lg bg-blue-600 px-4 py-1.5 text-sm font-medium text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {refining ? '优化中...' : '优化'}
+            </button>
           </div>
         )}
 

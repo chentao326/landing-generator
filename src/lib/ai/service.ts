@@ -150,4 +150,23 @@ export class AIService {
       "配色方案"
     );
   }
+
+  async generateRefined(
+    current: LandingPageContent,
+    feedback: string
+  ): Promise<LandingPageContent> {
+    const prompt = `你是一位资深的产品文案专家。用户已经生成了一个落地页，但对某些部分不满意，希望修改。
+
+当前内容：
+${JSON.stringify(current, null, 2)}
+
+用户修改建议：
+${feedback}
+
+请根据用户建议修改文案内容，只修改用户提到的部分，其他保持原样。
+输出严格符合 LandingPageContent 的 JSON 格式（与当前内容结构一致）。
+确保输出是合法的 JSON。`;
+
+    return this.safeGenerate<LandingPageContent>(prompt, "优化文案");
+  }
 }
