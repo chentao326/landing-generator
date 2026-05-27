@@ -2,8 +2,8 @@
   {
     "id": "stripe",
     "name": "Stripe",
-    "desc": "金融科技，深蓝墨色+电光紫，专业大气",
-    "category": "科技/SaaS"
+    "desc": "深蓝墨色+电光紫，金融科技专业大气",
+    "category": "金融科技"
   },
   {
     "id": "apple",
@@ -14,38 +14,50 @@
   {
     "id": "vercel",
     "name": "Vercel",
-    "desc": "开发者工具，黑色背景+几何元素",
+    "desc": "黑色背景+几何元素，开发者工具",
     "category": "开发者工具"
   },
   {
-    "id": "linear",
+    "id": "cursor",
+    "name": "Cursor",
+    "desc": "暖橙点缀+奶油基底，开发者工具杂志风",
+    "category": "开发者工具"
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "desc": "暖橙+深棕，AI 助手温暖专业感",
+    "category": "AI/ML"
+  },
+  {
+    "id": "nvidia",
+    "name": "NVIDIA",
+    "desc": "荧光绿+黑，GPU 科技未来感",
+    "category": "AI/ML"
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "desc": "紫粉渐变+圆角卡片，创意设计感",
+    "category": "设计工具"
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "desc": "极简黑白+emoji 点缀，清爽干净",
+    "category": "生产力"
+  },
+  {
+    "id": "linear.app",
     "name": "Linear",
     "desc": "暗色界面+荧光色点缀，精密工具感",
     "category": "生产力"
   },
   {
-    "id": "airbnb",
-    "name": "Airbnb",
-    "desc": "温暖珊瑚色+圆角卡片，社区氛围",
-    "category": "平台/市场"
-  },
-  {
-    "id": "spotify",
-    "name": "Spotify",
-    "desc": "深黑+荧光绿，大胆排版，潮流感",
-    "category": "娱乐/媒体"
-  },
-  {
-    "id": "notion",
-    "name": "Notion",
-    "desc": "极简黑白+emoji点缀，清爽干净",
-    "category": "生产力"
-  },
-  {
-    "id": "nike",
-    "name": "Nike",
-    "desc": "黑白强对比+动态排版，运动能量",
-    "category": "运动/零售"
+    "id": "supabase",
+    "name": "Supabase",
+    "desc": "翠绿+深黑，开源数据库",
+    "category": "开发者工具"
   },
   {
     "id": "shopify",
@@ -54,21 +66,303 @@
     "category": "电商/零售"
   },
   {
+    "id": "airbnb",
+    "name": "Airbnb",
+    "desc": "温暖珊瑚色+圆角卡片，社区氛围",
+    "category": "平台/市场"
+  },
+  {
+    "id": "nike",
+    "name": "Nike",
+    "desc": "黑白强对比+动态排版，运动能量",
+    "category": "运动/零售"
+  },
+  {
     "id": "slack",
     "name": "Slack",
     "desc": "多彩渐变+圆角，协作沟通感",
     "category": "协作/通讯"
   },
   {
-    "id": "tesla",
-    "name": "Tesla",
-    "desc": "纯黑+红色点缀，科技感未来风",
+    "id": "airtable",
+    "name": "Airtable",
+    "desc": "多彩表格化界面，清新色块",
+    "category": "生产力"
+  },
+  {
+    "id": "binance",
+    "name": "Binance",
+    "desc": "深黑+明黄，交易平台专业感",
+    "category": "Crypto"
+  },
+  {
+    "id": "bmw",
+    "name": "BMW",
+    "desc": "深蓝+银灰，德系精密工业风",
     "category": "汽车/科技"
   },
   {
-    "id": "figma",
-    "name": "Figma",
-    "desc": "紫粉渐变+圆角卡片，创意设计感",
+    "id": "bmw-m",
+    "name": "BMW M",
+    "desc": "赛道蓝+碳黑，性能运动感",
+    "category": "汽车/科技"
+  },
+  {
+    "id": "bugatti",
+    "name": "Bugatti",
+    "desc": "深蓝+碳纤维质感，超跑奢华",
+    "category": "汽车/科技"
+  },
+  {
+    "id": "cal",
+    "name": "Cal",
+    "desc": "黑白极简，日历产品清爽感",
+    "category": "生产力"
+  },
+  {
+    "id": "clay",
+    "name": "Clay",
+    "desc": "渐变紫+深色，3D 设计工具创意感",
     "category": "设计工具"
+  },
+  {
+    "id": "clickhouse",
+    "name": "ClickHouse",
+    "desc": "明黄+深灰，数据分析硬核风",
+    "category": "开发者工具"
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere",
+    "desc": "翠绿+深蓝，企业 AI 平台",
+    "category": "AI/ML"
+  },
+  {
+    "id": "coinbase",
+    "name": "Coinbase",
+    "desc": "电光蓝+白，加密金融信任感",
+    "category": "Crypto"
+  },
+  {
+    "id": "composio",
+    "name": "Composio",
+    "desc": "紫蓝渐变，AI 集成工具",
+    "category": "开发者工具"
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "desc": "深紫+霓虹，AI 语音科技感",
+    "category": "AI/ML"
+  },
+  {
+    "id": "expo",
+    "name": "Expo",
+    "desc": "蓝紫渐变，移动开发工具",
+    "category": "开发者工具"
+  },
+  {
+    "id": "ferrari",
+    "name": "Ferrari",
+    "desc": "跃马红+碳黑，超跑激情",
+    "category": "汽车/科技"
+  },
+  {
+    "id": "framer",
+    "name": "Framer",
+    "desc": "深黑+渐变紫，设计工具前卫风",
+    "category": "设计工具"
+  },
+  {
+    "id": "hashicorp",
+    "name": "HashiCorp",
+    "desc": "深蓝+灰，企业基础设施稳重感",
+    "category": "开发者工具"
+  },
+  {
+    "id": "ibm",
+    "name": "IBM",
+    "desc": "IBM 蓝+白，百年企业科技感",
+    "category": "企业"
+  },
+  {
+    "id": "intercom",
+    "name": "Intercom",
+    "desc": "蓝绿渐变+白，客服产品温暖风",
+    "category": "科技/SaaS"
+  },
+  {
+    "id": "meta",
+    "name": "Meta",
+    "desc": "渐变蓝+白，社交平台现代感",
+    "category": "科技/SaaS"
+  },
+  {
+    "id": "minimax",
+    "name": "MiniMax",
+    "desc": "紫色渐变，AI 多媒体平台",
+    "category": "AI/ML"
+  },
+  {
+    "id": "mintlify",
+    "name": "Mintlify",
+    "desc": "翠绿+深黑，开发者文档清爽感",
+    "category": "开发者工具"
+  },
+  {
+    "id": "miro",
+    "name": "Miro",
+    "desc": "明黄+白，在线白板协作感",
+    "category": "设计工具"
+  },
+  {
+    "id": "mistral.ai",
+    "name": "Mistral AI",
+    "desc": "深蓝+橙，法国 AI 品牌",
+    "category": "AI/ML"
+  },
+  {
+    "id": "mongodb",
+    "name": "MongoDB",
+    "desc": "翠绿+灰，数据库技术专业感",
+    "category": "开发者工具"
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "desc": "深灰+荧光蓝，本地 AI 运行",
+    "category": "开发者工具"
+  },
+  {
+    "id": "opencode.ai",
+    "name": "OpenCode AI",
+    "desc": "紫蓝渐变+暗色，AI 编码工具",
+    "category": "开发者工具"
+  },
+  {
+    "id": "pinterest",
+    "name": "Pinterest",
+    "desc": "珊瑚红+白，灵感社区温暖感",
+    "category": "社交/媒体"
+  },
+  {
+    "id": "playstation",
+    "name": "PlayStation",
+    "desc": "PS 蓝+白，游戏主机科技感",
+    "category": "游戏"
+  },
+  {
+    "id": "posthog",
+    "name": "PostHog",
+    "desc": "橙+深蓝，产品分析工具",
+    "category": "开发者工具"
+  },
+  {
+    "id": "raycast",
+    "name": "Raycast",
+    "desc": "橙紫渐变，效率工具现代化",
+    "category": "开发者工具"
+  },
+  {
+    "id": "renault",
+    "name": "Renault",
+    "desc": "银灰+黄，法系汽车科技感",
+    "category": "汽车/科技"
+  },
+  {
+    "id": "replicate",
+    "name": "Replicate",
+    "desc": "紫蓝+深黑，AI 模型平台",
+    "category": "AI/ML"
+  },
+  {
+    "id": "resend",
+    "name": "Resend",
+    "desc": "深蓝+白，开发者邮件服务",
+    "category": "开发者工具"
+  },
+  {
+    "id": "revolut",
+    "name": "Revolut",
+    "desc": "深灰+霓虹粉，数字银行先锋感",
+    "category": "金融科技"
+  },
+  {
+    "id": "sentry",
+    "name": "Sentry",
+    "desc": "深紫+橙，错误监控技术感",
+    "category": "开发者工具"
+  },
+  {
+    "id": "spacex",
+    "name": "SpaceX",
+    "desc": "纯黑+白，航天科技极简",
+    "category": "汽车/科技"
+  },
+  {
+    "id": "superhuman",
+    "name": "Superhuman",
+    "desc": "深色+荧光蓝，高端邮件体验",
+    "category": "生产力"
+  },
+  {
+    "id": "together.ai",
+    "name": "Together AI",
+    "desc": "渐变紫+暗色，开放 AI 平台",
+    "category": "AI/ML"
+  },
+  {
+    "id": "uber",
+    "name": "Uber",
+    "desc": "黑+白+蓝，出行平台现代感",
+    "category": "消费者"
+  },
+  {
+    "id": "vodafone",
+    "name": "Vodafone",
+    "desc": "大红+白，通信品牌醒目",
+    "category": "电信"
+  },
+  {
+    "id": "voltagent",
+    "name": "VoltAgent",
+    "desc": "紫蓝渐变，AI 代理开发工具",
+    "category": "开发者工具"
+  },
+  {
+    "id": "warp",
+    "name": "Warp",
+    "desc": "深黑+彩虹色，终端工具创意感",
+    "category": "开发者工具"
+  },
+  {
+    "id": "webflow",
+    "name": "Webflow",
+    "desc": "深蓝+白，无代码建站工具",
+    "category": "设计工具"
+  },
+  {
+    "id": "wired",
+    "name": "WIRED",
+    "desc": "高对比黑白+科技蓝，媒体编辑风",
+    "category": "科技/媒体"
+  },
+  {
+    "id": "wise",
+    "name": "Wise",
+    "desc": "翠绿+白，跨境金融清爽感",
+    "category": "金融科技"
+  },
+  {
+    "id": "x.ai",
+    "name": "xAI",
+    "desc": "纯黑+白，AI 前沿科技",
+    "category": "AI/ML"
+  },
+  {
+    "id": "zapier",
+    "name": "Zapier",
+    "desc": "橙+深灰，自动化工具",
+    "category": "科技/SaaS"
   }
 ]
