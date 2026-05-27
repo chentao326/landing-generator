@@ -1,5 +1,3 @@
-'use client';
-
 import type { FooterSection as FooterSectionType, ColorScheme } from '@/lib/types';
 
 interface FooterSectionProps {

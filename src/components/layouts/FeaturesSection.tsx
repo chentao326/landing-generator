@@ -1,5 +1,3 @@
-'use client';
-
 import type { FeaturesSection as FeaturesSectionType, ColorScheme } from '@/lib/types';
 import * as Icons from 'lucide-react';
 

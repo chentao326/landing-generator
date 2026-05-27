@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import type { HeroSection as HeroSectionType, LayoutSkeleton, ColorScheme } from '@/lib/types';
 

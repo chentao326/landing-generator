@@ -1,5 +1,3 @@
-'use client';
-
 import type { LandingPageContent, LayoutSkeleton, ColorScheme } from '@/lib/types';
 import HeroSection from '@/components/layouts/HeroSection';
 import FeaturesSection from '@/components/layouts/FeaturesSection';

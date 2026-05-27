@@ -1,5 +1,3 @@
-'use client';
-
 import type { CTASection as CTASectionType, ColorScheme } from '@/lib/types';
 
 interface CTASectionProps {
