@@ -3,6 +3,7 @@ import { generationInputSchema } from "@/lib/schemas";
 import { AIService } from "@/lib/ai/service";
 import { getOpenAIClient } from "@/lib/ai/client";
 import { rateLimit } from "@/lib/rate-limit";
+import { getDesignColors } from "@/lib/designs";
 import type {
   GenerateResponse,
   GenerationResult,
@@ -40,12 +41,16 @@ export async function POST(request: Request) {
       sellingPoints,
     };
 
+    // Load style colors if a design style is selected
+    const styleId = (body as Record<string, unknown>).styleId as string | undefined;
+    const styleColors = styleId ? getDesignColors(styleId) : undefined;
+
     const client = getOpenAIClient();
     const service = new AIService(client);
 
     const [content, colorScheme] = await Promise.all([
       service.generateCopy(userInput),
-      service.generateColorScheme(userInput),
+      service.generateColorScheme(userInput, styleColors),
     ]);
 
     const result: GenerationResult = {

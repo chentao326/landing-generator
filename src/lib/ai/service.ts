@@ -59,7 +59,10 @@ export function copyPrompt(input: UserInput): string {
 }`;
 }
 
-export function themePrompt(input: UserInput): string {
+export function themePrompt(input: UserInput, styleColors?: Record<string, string>): string {
+  const styleRef = styleColors && Object.keys(styleColors).length > 0
+    ? `\n参考配色风格（请基于这些颜色方向调整以适应落地页）：\n${JSON.stringify(styleColors, null, 2)}\n`
+    : '';
   return `你是一位专业的 UI/UX 设计师，请根据以下产品信息，推荐一套适合着陆页（Landing Page）的配色方案。
 
 产品名称：${input.productName}
@@ -67,7 +70,7 @@ export function themePrompt(input: UserInput): string {
 目标受众：${input.targetAudience}
 核心卖点：${input.sellingPoints.join("、")}
 
-请根据产品的行业属性、品牌调性和目标受众的偏好，选择一套协调的颜色搭配。每个颜色使用 6 位 hex 色值（如 #1A2B3C）。
+请根据产品的行业属性、品牌调性和目标受众的偏好，选择一套协调的颜色搭配。每个颜色使用 6 位 hex 色值（如 #1A2B3C）。${styleRef}
 
 输出严格符合以下 JSON 格式：
 {
@@ -141,9 +144,9 @@ export class AIService {
     );
   }
 
-  async generateColorScheme(input: UserInput): Promise<ColorScheme> {
+  async generateColorScheme(input: UserInput, styleColors?: Record<string, string>): Promise<ColorScheme> {
     return this.safeGenerate<ColorScheme>(
-      themePrompt(input),
+      themePrompt(input, styleColors),
       "配色方案"
     );
   }

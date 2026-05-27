@@ -1,0 +1,74 @@
+[
+  {
+    "id": "stripe",
+    "name": "Stripe",
+    "desc": "金融科技，深蓝墨色+电光紫，专业大气",
+    "category": "科技/SaaS"
+  },
+  {
+    "id": "apple",
+    "name": "Apple",
+    "desc": "极简白+深空灰，大留白，字体精致",
+    "category": "消费电子"
+  },
+  {
+    "id": "vercel",
+    "name": "Vercel",
+    "desc": "开发者工具，黑色背景+几何元素",
+    "category": "开发者工具"
+  },
+  {
+    "id": "linear",
+    "name": "Linear",
+    "desc": "暗色界面+荧光色点缀，精密工具感",
+    "category": "生产力"
+  },
+  {
+    "id": "airbnb",
+    "name": "Airbnb",
+    "desc": "温暖珊瑚色+圆角卡片，社区氛围",
+    "category": "平台/市场"
+  },
+  {
+    "id": "spotify",
+    "name": "Spotify",
+    "desc": "深黑+荧光绿，大胆排版，潮流感",
+    "category": "娱乐/媒体"
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "desc": "极简黑白+emoji点缀，清爽干净",
+    "category": "生产力"
+  },
+  {
+    "id": "nike",
+    "name": "Nike",
+    "desc": "黑白强对比+动态排版，运动能量",
+    "category": "运动/零售"
+  },
+  {
+    "id": "shopify",
+    "name": "Shopify",
+    "desc": "翠绿+深灰，电商商务风",
+    "category": "电商/零售"
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "desc": "多彩渐变+圆角，协作沟通感",
+    "category": "协作/通讯"
+  },
+  {
+    "id": "tesla",
+    "name": "Tesla",
+    "desc": "纯黑+红色点缀，科技感未来风",
+    "category": "汽车/科技"
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "desc": "紫粉渐变+圆角卡片，创意设计感",
+    "category": "设计工具"
+  }
+]

@@ -3,8 +3,9 @@
 import { useState } from 'react';
 import { useLandingStore } from '@/store';
 import { userInputSchema } from '@/lib/schemas';
-import type { LayoutSkeleton, GenerateResponse } from '@/lib/types';
+import type { LayoutSkeleton, GenerateResponse, DesignStyle } from '@/lib/types';
 import ExportButton from '@/components/editor/ExportButton';
+import styles from '@/designs/manifest.json';
 
 // --------------------------------------------------------------- Skeleton options
 
@@ -49,6 +50,8 @@ export default function Home() {
   const [viewport, setViewport] = useState<ViewportSize>('desktop');
 
   const [previewError, setPreviewError] = useState<string | null>(null);
+  const [selectedStyle, setSelectedStyle] = useState<string>('');
+
   // ---- sellingPoints helpers
 
   const addSellingPoint = () => {
@@ -99,6 +102,7 @@ export default function Home() {
         sellingPoints: userInput.sellingPoints,
         skeleton: currentSkeleton,
         temperature,
+        ...(selectedStyle ? { styleId: selectedStyle } : {}),
       };
 
       const res = await fetch('/api/generate', {
@@ -200,6 +204,23 @@ export default function Home() {
             placeholder="例如：初创企业、独立开发者"
             className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
           />
+        </div>
+
+        {/* 设计风格 */}
+        <div className="mb-4">
+          <label className="mb-1 block text-sm font-medium text-gray-700">
+            设计风格
+          </label>
+          <select
+            value={selectedStyle}
+            onChange={(e) => setSelectedStyle(e.target.value)}
+            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 bg-white"
+          >
+            <option value="">AI 自动匹配</option>
+            {(styles as DesignStyle[]).map((s) => (
+              <option key={s.id} value={s.id}>{s.name} — {s.desc}</option>
+            ))}
+          </select>
         </div>
 
         {/* 卖点列表 */}

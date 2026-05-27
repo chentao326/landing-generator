@@ -73,3 +73,10 @@ export interface GenerationResult {
 export interface GenerateResponse {
   result: GenerationResult;
 }
+
+export interface DesignStyle {
+  id: string;
+  name: string;
+  desc: string;
+  category: string;
+}
