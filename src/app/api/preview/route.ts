@@ -5,6 +5,7 @@ import { NextResponse } from 'next/server';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const { renderToStaticMarkup } = require('react-dom/server');
+import { createElement } from 'react';
 import { z } from 'zod';
 import LandingPage from '@/components/layouts/LandingPage';
 import { colorSchemeSchema } from '@/lib/schemas';
@@ -90,7 +91,7 @@ export async function POST(req: Request) {
 
     // Render LandingPage component to static HTML
     const componentHtml = renderToStaticMarkup(
-      LandingPage({ content, skeleton, colorScheme })
+      createElement(LandingPage, { content, skeleton, colorScheme })
     );
 
     // Build full HTML document
