@@ -7,5 +7,6 @@ export function getOpenAIClient(): OpenAI {
       "未找到 OPENAI_API_KEY 环境变量，请在 .env.local 文件中设置该变量"
     );
   }
-  return new OpenAI({ apiKey });
+  const baseURL = process.env.OPENAI_BASE_URL || undefined;
+  return new OpenAI({ apiKey, ...(baseURL ? { baseURL } : {}) });
 }
