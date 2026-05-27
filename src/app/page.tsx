@@ -187,7 +187,7 @@ export default function Home() {
             value={userInput.description}
             onChange={(e) => setUserInput({ description: e.target.value })}
             placeholder="简要描述你的产品..."
-            rows={3}
+            rows={6}
             className="w-full resize-none rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
           />
         </div>

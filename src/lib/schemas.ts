@@ -10,7 +10,7 @@ export const userInputSchema = z.object({
   description: z
     .string()
     .min(10, "产品描述至少需要 10 个字符")
-    .max(200, "产品描述不能超过 200 个字符"),
+    .max(1000, "产品描述不能超过 1000 个字符"),
   targetAudience: z
     .string()
     .min(1, "目标受众不能为空"),
