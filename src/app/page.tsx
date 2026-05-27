@@ -336,10 +336,10 @@ export default function Home() {
               </button>
             </div>
           ) : previewHtml ? (
-            <div className="flex justify-center py-4">
+            <div className="h-full w-full overflow-auto p-4">
               <iframe
                 srcDoc={previewHtml}
-                style={{ width: selectedWidth, height: '100%', minHeight: '100%' }}
+                style={{ width: '100%', maxWidth: selectedWidth, height: '100%', minHeight: '80vh' }}
                 className="border-0 bg-white shadow-lg transition-all duration-300"
                 title="落地页预览"
               />
